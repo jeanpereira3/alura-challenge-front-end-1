@@ -11,7 +11,8 @@
   --cor-texto-principal: #FFFFFF;
   --cor-input: rgba(255, 255, 255, 0.16);
 
-  --font-principal: 'Inter', sans-serif;;
+  --font-principal: 'Inter', sans-serif;
+  ;
 }
 
 .container {
@@ -29,7 +30,7 @@
   padding: 3% 3% 0 3%;
 }
 
-.logo{
+.logo {
   margin: auto 0;
   width: 145px;
   height: 34px;
@@ -47,27 +48,30 @@
   padding: 0 14px;
 }
 
-.usuario_logado{
+.usuario_logado {
   width: 145px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
 }
 
 .usuario_logado_img {
-  height: 100%;
+  width: 32px;
+  height: 32px;
 }
 
-main{
+section {
   padding: 40px 3% 0 3%;
 }
 
-.navegacao{
+.navegacao {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.navegacao_titulo{
+.navegacao_titulo {
   text-transform: uppercase;
   color: var(--cor-texto-principal);
   font-size: 12px;
@@ -76,11 +80,17 @@ main{
 }
 
 .navegacao_link {
-  color: var(--cor-texto-principal);
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
   display: flex;
   gap: 16px;
   align-items: center;
+}
+
+.texto_principal {
+  color: var(--cor-texto-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.link {
+  text-decoration: none;
 }
