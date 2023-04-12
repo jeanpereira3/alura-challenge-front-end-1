@@ -44,11 +44,11 @@
   border-radius: 8px;
   background-color: var(--cor-input);
   font-size: 16px;
+  padding: 0 14px;
 }
 
 .buscar {
   width: 50%;
-  padding: 0 14px;
 }
 
 .usuario_logado {
@@ -69,6 +69,7 @@ section {
 }
 
 .navegacao {
+  width: 272px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -86,7 +87,7 @@ section {
 }
 
 .conteudo_principal{
-  width: 50%;
+  width: 52%;
 }
 
 .editor_fundo{
@@ -129,6 +130,20 @@ section {
 
 .btn_principal:hover {
   background-color: var(--cor-botao-principal-hover);
+}
+
+.configuracao_projeto{
+  width: 272px;
+}
+
+.configuracao_projeto_titulo{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input_configuracao{
+  height: 56px;
 }
 
 .texto_principal {
