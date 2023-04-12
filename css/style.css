@@ -146,6 +146,11 @@ section {
   height: 56px;
 }
 
+.input_configuracao_descricao {
+  resize: none;
+  padding-top: 14px;
+}
+
 .texto_principal {
   color: var(--cor-texto-principal);
   font-size: 16px;
