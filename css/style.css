@@ -9,6 +9,7 @@
 :root {
   --cor-principal: #051D3B;
   --cor-texto-principal: #FFFFFF;
+  --cor-texto-select: rgba(255, 255, 255, 0.3);
   --cor-input: rgba(255, 255, 255, 0.16);
   --cor-editor: #141414;
   --cor-botao-principal: rgba(80, 129, 251, 0.08);
@@ -81,16 +82,16 @@ section {
   align-items: center;
 }
 
-.container_main{
+.container_main {
   display: flex;
   justify-content: space-between;
 }
 
-.conteudo_principal{
+.conteudo_principal {
   width: 52%;
 }
 
-.editor_fundo{
+.editor_fundo {
   border-radius: 8px;
   height: 366px;
   background-color: #6BD1FF;
@@ -98,18 +99,18 @@ section {
   margin-bottom: 32px;
 }
 
-.editor_container{
+.editor_container {
   border-radius: 8px;
   background-color: var(--cor-editor);
   width: 100%;
   height: 100%;
 }
 
-.editor_cabecalho{
+.editor_cabecalho {
   padding: 16px;
 }
 
-#editor_codigo{
+#editor_codigo {
   border: none;
   resize: none;
   width: 100%;
@@ -119,7 +120,7 @@ section {
 }
 
 
-.btn_principal{
+.btn_principal {
   width: 100%;
   height: 56px;
   background-color: var(--cor-botao-principal);
@@ -132,17 +133,23 @@ section {
   background-color: var(--cor-botao-principal-hover);
 }
 
-.configuracao_projeto{
+.configuracao_projeto {
   width: 272px;
 }
 
-.configuracao_projeto_titulo{
+.form_configuracao_projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.configuracao_projeto_flex {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.input_configuracao{
+.input_configuracao {
   height: 56px;
 }
 
@@ -153,6 +160,12 @@ section {
 
 .texto_principal {
   color: var(--cor-texto-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.texto_select {
+  color: var(--cor-texto-select);
   font-size: 16px;
   font-weight: 400;
 }
