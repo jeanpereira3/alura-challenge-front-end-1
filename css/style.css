@@ -114,10 +114,11 @@ section {
 #editor_codigo {
   border: none;
   resize: none;
-  width: 100%;
+  width: calc(100% - 32px) ;
   background-color: var(--cor-editor);
   font-family: var(--font-editor);
   padding: 0 16px;
+  outline: none;
 }
 
 .btn{
