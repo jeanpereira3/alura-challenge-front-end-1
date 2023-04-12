@@ -32,18 +32,21 @@
         </a>
       </nav>
       <main class="conteudo_principal">
-        <div class="editor_fundo">
-          <div class="editor_container">
-            <div class="editor_cabecalho">
-              <img src="img/Mac_buttons.png" alt="Botoes de pagina do Mac OS">
-            </div>
-            <div class="editor_corpo">
-              <textarea class="editor_codigo texto_principal" name="editor_codigo" id="editor_codigo"
-                rows="16"></textarea>
+        <form action="">
+          <div class="editor_fundo">
+            <div class="editor_container">
+              <div class="editor_cabecalho">
+                <img src="img/Mac_buttons.png" alt="Botoes de pagina do Mac OS">
+              </div>
+              <div class="editor_corpo">
+                <textarea class="editor_codigo texto_principal" name="editor_codigo" id="editor_codigo"
+                  rows="16"></textarea>
+              </div>
             </div>
           </div>
-        </div>
-        <button class="btn_principal texto_principal">Visualizar com o highlight</button>
+          <button class="btn btn_principal texto_principal">Visualizar com o highlight</button>
+        </form>
+
       </main>
       <aside class="configuracao_projeto">
         <form action="" class="form_configuracao_projeto">
@@ -55,11 +58,12 @@
           </div>
           <div class="configuracao_projeto_flex">
             <h4 class="navegacao_titulo">Personalização</h4>
-            <select name="" id="" class="input texto_select input_configuracao" >
+            <select name="" id="" class="input texto_select input_configuracao">
               <option value="">JavaScript</option>
             </select>
             <input type="color" class="input_configuracao input_color" value="#6BD1FF">
           </div>
+          <button class="btn btn_secundario texto_secundario">Salvar projeto</button>
         </form>
       </aside>
     </section>

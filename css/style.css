@@ -9,11 +9,12 @@
 :root {
   --cor-principal: #051D3B;
   --cor-texto-principal: #FFFFFF;
+  --cor-texto-secundario: #051D3B;
   --cor-texto-select: rgba(255, 255, 255, 0.3);
   --cor-input: rgba(255, 255, 255, 0.16);
   --cor-editor: #141414;
   --cor-botao-principal: rgba(80, 129, 251, 0.08);
-  --cor-botao-principal-hover: rgba(80, 129, 251, 0.1);
+  --cor-botao-secundario: #5081FB;
 
   --font-principal: 'Inter', sans-serif;
   --font-editor: 'Roboto', sans-serif;
@@ -119,18 +120,25 @@ section {
   padding: 0 16px;
 }
 
-
-.btn_principal {
+.btn{
   width: 100%;
   height: 56px;
-  background-color: var(--cor-botao-principal);
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.btn_principal:hover {
-  background-color: var(--cor-botao-principal-hover);
+.btn:hover {
+  opacity: 0.6;
+
+}
+
+.btn_principal {
+  background-color: var(--cor-botao-principal);
+}
+
+.btn_secundario {
+  background-color: var(--cor-botao-secundario);
 }
 
 .configuracao_projeto {
@@ -168,6 +176,12 @@ section {
 
 .texto_principal {
   color: var(--cor-texto-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.texto_secundario {
+  color: var(--cor-texto-secundario);
   font-size: 16px;
   font-weight: 400;
 }
