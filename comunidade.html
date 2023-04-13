@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AluraDev - Comunidade</title>
+  <link rel="stylesheet" href="css/darck.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/2221001843.js" crossorigin="anonymous"></script>
@@ -75,46 +76,27 @@
         </div>
       </nav>
 
-      <main class="conteudo_principal">
-        <form action="">
-          <div class="editor_fundo">
+      <main class="conteudo_principal_comunidade">
+        <div class="card">
+          <div class="editor_fundo_card">
             <div class="editor_container">
               <div class="editor_cabecalho">
                 <img src="img/Mac_buttons.png" alt="Botoes de pagina do Mac OS">
               </div>
               <div class="editor_corpo">
-                <textarea class="editor_codigo texto_principal" name="editor_codigo" id="editor_codigo" cols="30"
-                  rows="12"></textarea>
+                <code class="editor_codigo hljs" contenteditable="true" aria-label="Editor de codigo">function teste(){}</code>
               </div>
             </div>
           </div>
-          <button class="btn btn_principal texto_principal">Visualizar com o highlight</button>
-        </form>
+          <div class="info_card"></div>
+        </div>
       </main>
 
-      <aside class="configuracao_projeto">
-        <form action="" class="form_configuracao_projeto">
-          <div class="configuracao_projeto_flex">
-            <h4 class="navegacao_titulo">Seu projeto</h4>
-            <input class="input input_configuracao texto_principal" placeholder="Nome do seu projeto" type="text">
-            <textarea class="input input_configuracao input_configuracao_descricao texto_principal"
-              placeholder="Descrição do seu projeto" name="" id="" cols="30" rows="10"></textarea>
-          </div>
-          <div class="configuracao_projeto_flex">
-            <h4 class="navegacao_titulo">Personalização</h4>
-            <div class="configuracao_botoes_projeto">
-              <select name="" id="" class="input texto_select input_configuracao">
-                <option value="">JavaScript</option>
-              </select>
-              <input type="color" class="input_configuracao input_color" value="#6BD1FF">
-            </div>
-          </div>
-          <button class="input btn btn_secundario texto_secundario">Salvar projeto</button>
-        </form>
-      </aside>
+      
     </section>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

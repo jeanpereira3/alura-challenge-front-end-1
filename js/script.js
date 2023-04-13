@@ -5,9 +5,6 @@ const buscaMobile = document.querySelector('[data-abrir-busca]')
 const inputBuscaMobile = document.querySelector('.busca_mobile_input')
 const fecharBuscaMobile = document.querySelector('[data-fechar-busca]')
 
-const inputColor = document.querySelector('[type=color]')
-const editorFundo = document.querySelector('.editor_fundo')
-
 const linguagem = document.querySelector('.texto_select')
 const areaCodigo = document.querySelector('.editor_corpo')
 const botaoHighlight = document.querySelector('[data-highlight]')
@@ -36,11 +33,6 @@ buscaMobile.addEventListener('click', ()=>{
 fecharBuscaMobile.addEventListener('click', () => {
   inputBuscaMobile.classList.remove('flex_mobile')
 })
-
-inputColor.addEventListener('change', () => {
-  editorFundo.setAttribute('style', `background-color: ${inputColor.value};`)
-})
-
 
 const aplicaHighlight = () => {
   const codigo = areaCodigo.innerText
