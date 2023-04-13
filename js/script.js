@@ -8,6 +8,11 @@ const fecharBuscaMobile = document.querySelector('[data-fechar-busca]')
 const inputColor = document.querySelector('[type=color]')
 const editorFundo = document.querySelector('.editor_fundo')
 
+const linguagem = document.querySelector('.texto_select')
+const areaCodigo = document.querySelector('.editor_corpo')
+const botaoHighlight = document.querySelector('[data-highlight]')
+
+
 bootaoAbrir.addEventListener('click', () =>{
   bootaoAbrir.classList.add('none')
   bootaoFechar.classList.remove('none')
@@ -34,4 +39,16 @@ fecharBuscaMobile.addEventListener('click', () => {
 
 inputColor.addEventListener('change', () => {
   editorFundo.setAttribute('style', `background-color: ${inputColor.value};`)
+})
+
+
+const aplicaHighlight = () => {
+  const codigo = areaCodigo.innerText
+  areaCodigo.innerHTML = `<code class=" editor_codigo hljs ${linguagem.value}" contenteditable="true" aria-label="Editor de codigo"><code/>`
+  areaCodigo.querySelector('code').textContent = codigo
+  hljs.highlightElement(areaCodigo.querySelector('code'))
+}
+
+botaoHighlight.addEventListener('click',()=>{
+  aplicaHighlight()
 })
