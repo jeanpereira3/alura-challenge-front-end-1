@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -18,6 +18,7 @@
   --cor-editor: #141414;
   --cor-botao-principal: rgba(80, 129, 251, 0.08);
   --cor-botao-secundario: #5081FB;
+  --cor-backgound-card: rgba(0, 0, 0, 0.16);
 
   --font-principal: 'Inter', sans-serif;
   --font-editor: 'Roboto', sans-serif;
@@ -89,7 +90,8 @@
 }
 
 .usuario_logado,
-.usuario_logado_mobile {
+.usuario_logado_mobile,
+.usuario_logado_card {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -173,8 +175,8 @@ section {
 }
 
 .editor_fundo_card {
-  width: 40%;
-  height: 240px;
+  width: 100%;
+  height: 288px;
   border-radius: 8px;
   background-color: #6BD1FF;
   padding: 24px;
@@ -186,6 +188,14 @@ section {
   width: 100%;
   min-height: 366px;
   padding: 16px;
+}
+
+.editor_container_card {
+  border-radius: 8px;
+  background-color: var(--cor-editor);
+  width: 100%;
+  min-height: 100%;
+  padding: 12px;
 }
 
 .editor_cabecalho {
@@ -268,6 +278,16 @@ section {
 
 .conteudo_principal_comunidade {
   width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  width: calc(50% - 13px);
+  height: 467px;
+  background-color: var(--cor-backgound-card);
+  border-radius: 8px;
 }
 
 .texto_principal {
@@ -298,6 +318,43 @@ section {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.4em;
+}
+
+.info_projeto {
+  padding: 24px;
+}
+
+.info_projeto h2 {
+  font-family: var(--font-principal);
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--cor-texto-principal);
+  line-height: 32px;
+}
+
+.social_card {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.social_card_botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social_card_botoes div {
+  width: 58px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.social_card_botoes div i {
+  font-size: 24px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -354,6 +411,14 @@ section {
 
   .form_configuracao_projeto {
     margin-bottom: 40px;
+  }
+
+  .conteudo_principal_comunidade{
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
   }
 
   .flex {
