@@ -3,11 +3,14 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: var(--font-principal);
 }
 
 :root {
   --cor-principal: #051D3B;
+  --cor-secundario: #2D415B;
+  --cor-terciaria: rgba(255, 255, 255, 0.2);
   --cor-texto-principal: #FFFFFF;
   --cor-texto-secundario: #051D3B;
   --cor-texto-select: rgba(255, 255, 255, 0.3);
@@ -24,6 +27,7 @@
   width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
+  padding-top: 3%;
   border-radius: 40px;
   background-color: var(--cor-principal);
 }
@@ -32,7 +36,7 @@
   height: 56px;
   display: flex;
   justify-content: space-between;
-  padding: 3% 3% 0 3%;
+  padding: 0 3%;
 }
 
 .logo {
@@ -50,15 +54,57 @@
 }
 
 .buscar {
-  width: 50%;
+  width: 52%;
+  height: 56px;
+}
+
+.busca_mobile_input input {
+  width: 84%;
+  height: 56px;
+  background-color: var(--cor-secundario);
+}
+
+.buscar_mobile {
+  display: none;
+  cursor: pointer;
+}
+
+.busca_mobile_input {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
 }
 
 .usuario_logado {
   width: 145px;
+}
+
+.usuario_logado,
+.usuario_logado_mobile {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
+}
+
+.usuario_logado_mobile {
+  border-top: 1px solid var(--cor-terciaria);
+  padding-top: 24px;
+  justify-content: flex-start;
+}
+
+.menu_amburger {
+  cursor: pointer;
+  display: none;
+}
+
+.icones_cabecalho {
+  font-size: 30px;
 }
 
 .usuario_logado_img {
@@ -70,8 +116,27 @@ section {
   padding: 40px 3% 0 3%;
 }
 
-.navegacao {
+.navegacao_desktop {
   width: 272px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navegacao_mobile {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  top: 95px;
+  right: 3%;
+  height: 80vh;
+  background-color: var(--cor-secundario);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.navegacao_mobile_links {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -86,6 +151,7 @@ section {
 .container_main {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .conteudo_principal {
@@ -114,14 +180,14 @@ section {
 #editor_codigo {
   border: none;
   resize: none;
-  width: calc(100% - 32px) ;
+  width: 100%;
   background-color: var(--cor-editor);
   font-family: var(--font-editor);
   padding: 0 16px;
   outline: none;
 }
 
-.btn{
+.btn {
   width: 100%;
   height: 56px;
   border: none;
@@ -165,9 +231,18 @@ section {
 .input_configuracao_descricao {
   resize: none;
   padding-top: 14px;
+  outline: none;
+  height: 80px;
 }
 
-.input_color{
+.configuracao_botoes_projeto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.input_color {
   width: 100%;
   border-radius: 8px;
   background-color: transparent;
@@ -203,4 +278,95 @@ section {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.4em;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .navegacao_desktop {
+    width: 210px;
+  }
+
+  .configuracao_projeto {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navegacao_desktop {
+    display: none;
+  }
+
+  .usuario_logado {
+    display: none;
+  }
+
+  .menu_amburger {
+    display: block;
+    width: 48px;
+    text-align: center;
+    margin: auto 0;
+  }
+
+  .container_main {
+    flex-direction: column;
+  }
+
+  .conteudo_principal {
+    width: 100%;
+  }
+
+  .configuracao_projeto {
+    width: 100%;
+  }
+
+  .configuracao_botoes_projeto {
+    flex-direction: row;
+  }
+
+  .input_configuracao {
+    width: 100%;
+  }
+
+  .form_configuracao_projeto {
+    margin-bottom: 40px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .configuracao_botoes_projeto {
+    flex-direction: column;
+  }
+
+  .buscar {
+    display: none;
+  }
+
+  .buscar_mobile {
+    display: block;
+    width: 80px;
+    text-align: right;
+    margin: auto 0;
+  }
+
+  .flex_mobile {
+    display: flex;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
 }
