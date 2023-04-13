@@ -5,6 +5,9 @@ const buscaMobile = document.querySelector('[data-abrir-busca]')
 const inputBuscaMobile = document.querySelector('.busca_mobile_input')
 const fecharBuscaMobile = document.querySelector('[data-fechar-busca]')
 
+const inputColor = document.querySelector('[type=color]')
+const editorFundo = document.querySelector('.editor_fundo')
+
 bootaoAbrir.addEventListener('click', () =>{
   bootaoAbrir.classList.add('none')
   bootaoFechar.classList.remove('none')
@@ -27,4 +30,8 @@ buscaMobile.addEventListener('click', ()=>{
 
 fecharBuscaMobile.addEventListener('click', () => {
   inputBuscaMobile.classList.remove('flex_mobile')
+})
+
+inputColor.addEventListener('change', () => {
+  editorFundo.setAttribute('style', `background-color: ${inputColor.value};`)
 })
