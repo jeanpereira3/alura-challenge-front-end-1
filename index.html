@@ -90,25 +90,25 @@
       </main>
 
       <aside class="configuracao_projeto">
-        <form action="" class="form_configuracao_projeto">
+        <div action="" class="form_configuracao_projeto">
           <div class="configuracao_projeto_flex">
             <h4 class="navegacao_titulo">Seu projeto</h4>
-            <input class="input input_configuracao texto_principal" placeholder="Nome do seu projeto" type="text">
+            <input class="input input_configuracao texto_principal" placeholder="Nome do seu projeto" type="text" data-form="titulo">
             <textarea class="input input_configuracao input_configuracao_descricao texto_principal"
-              placeholder="Descrição do seu projeto" name="" id="" cols="30" rows="10"></textarea>
+              placeholder="Descrição do seu projeto" name="" id="" cols="30" rows="10" data-form="descricao"></textarea>
           </div>
           <div class="configuracao_projeto_flex">
             <h4 class="navegacao_titulo">Personalização</h4>
             <div class="configuracao_botoes_projeto">
-              <select name="texto_select" id="texto_select" class="input texto_select input_configuracao">
+              <select name="texto_select" id="texto_select" class="input texto_select input_configuracao" data-form="linguagem">
                 <option value="html">HTML</option>
                 <option value="javascript">JavaScript</option>
               </select>
-              <input type="color" class="input_configuracao input_color" value="#6BD1FF">
+              <input type="color" class="input_configuracao input_color" value="#6BD1FF" data-form="cor-fundo">
             </div>
           </div>
-          <button class="input btn btn_secundario texto_secundario">Salvar projeto</button>
-        </form>
+          <button class="input btn btn_secundario texto_secundario" data-form="salvar">Salvar projeto</button>
+        </div>
       </aside>
     </section>
   </div>
@@ -116,6 +116,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/color-picker.js"></script>
+  <script src="js/salvar.js"></script>
 </body>
 
 </html>

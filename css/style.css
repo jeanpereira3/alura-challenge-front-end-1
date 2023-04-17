@@ -19,6 +19,8 @@
   --cor-botao-principal: rgba(80, 129, 251, 0.08);
   --cor-botao-secundario: #5081FB;
   --cor-backgound-card: rgba(0, 0, 0, 0.16);
+  --cor-background-social-hover: rgba(255, 255, 255, 0.08);
+  --cor-background-input-hover: rgba(255, 255, 255, 0.24);
 
   --font-principal: 'Inter', sans-serif;
   --font-editor: 'Roboto', sans-serif;
@@ -52,6 +54,11 @@
   background-color: var(--cor-input);
   font-size: 16px;
   padding: 0 14px;
+  cursor: pointer;
+}
+
+.input:hover {
+  background-color: var(--cor-background-input-hover);
 }
 
 .input option {
@@ -97,6 +104,8 @@
   align-items: center;
   gap: 8px;
 }
+
+
 
 .usuario_logado_mobile {
   border-top: 1px solid var(--cor-terciaria);
@@ -274,6 +283,7 @@ section {
   background-color: transparent;
   padding: 4px;
   border: 1px solid #6BD1FF;
+  cursor: pointer;
 }
 
 .conteudo_principal_comunidade {
@@ -351,6 +361,14 @@ section {
   align-items: center;
   gap: 8px;
   padding: 8px;
+  cursor: pointer;
+}
+
+.usuario_logado:hover,
+.social_card_botoes div:hover{
+  background-color: var(--cor-background-social-hover);
+  border-radius: 16px;
+  transition: .4s;
 }
 
 .social_card_botoes div i {
