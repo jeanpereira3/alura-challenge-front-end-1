@@ -218,12 +218,19 @@ section {
   white-space: pre-wrap;
 }
 
+.botoes_editor{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .btn {
   width: 100%;
   height: 56px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn:hover {

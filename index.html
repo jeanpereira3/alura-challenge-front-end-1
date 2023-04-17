@@ -30,17 +30,18 @@
       <div class="busca_mobile_input">
         <input class="input texto_principal" type="text" placeholder="Busque por algo">
         <div class="menu_amburger">
-          <i class="fa-solid fa-xmark icones_cabecalho" data-fechar-busca="data-fechar-busca" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-xmark icones_cabecalho" data-fechar-busca="data-fechar-busca"
+            style="color: #ffffff;"></i>
         </div>
-        
+
       </div>
 
       <div class="menu_amburger" data-fechado="data-fechado">
-        <i class="fa-solid fa-bars icones_cabecalho"  style="color: #ffffff;"></i>
+        <i class="fa-solid fa-bars icones_cabecalho" style="color: #ffffff;"></i>
       </div>
 
       <div class="menu_amburger none" data-aberto="data-aberto">
-        <i class="fa-solid fa-xmark icones_cabecalho none"  style="color: #ffffff;"></i>
+        <i class="fa-solid fa-xmark icones_cabecalho none" style="color: #ffffff;"></i>
       </div>
     </header>
 
@@ -76,31 +77,44 @@
       </nav>
 
       <main class="conteudo_principal">
-          <div class="editor_fundo">
-            <div class="editor_container">
-              <div class="editor_cabecalho">
-                <img src="img/Mac_buttons.png" alt="Botoes de pagina do Mac OS">
-              </div>
-              <div class="editor_corpo">
-                <code class="editor_codigo hljs"  contenteditable="true" aria-label="Editor de codigo">function teste(){}</code>
-              </div>
+        <div class="editor_fundo" data-editor="editor-principal">
+          <div class="editor_container">
+            <div class="editor_cabecalho">
+              <img src="img/Mac_buttons.png" alt="Botoes de pagina do Mac OS">
+            </div>
+            <div class="editor_corpo">
+              <code class="editor_codigo hljs" contenteditable="true"
+                aria-label="Editor de codigo">function teste(){}</code>
             </div>
           </div>
-          <button class="btn btn_principal texto_principal" data-highlight="data-highlight">Visualizar com o highlight</button>
+        </div>
+        <div class="botoes_editor">
+          <button class="btn btn_principal texto_principal" data-highlight="data-highlight">Visualizar com o
+            highlight</button>
+
+          <select name="exportar" id="exportar" class="btn btn_principal texto_principal input">
+            <option value="">Exportar</option>
+            <option value="png">Png</option>
+            <option value="jpg">Jpg</option>
+          </select>
+        </div>
+
       </main>
 
       <aside class="configuracao_projeto">
         <div action="" class="form_configuracao_projeto">
           <div class="configuracao_projeto_flex">
             <h4 class="navegacao_titulo">Seu projeto</h4>
-            <input class="input input_configuracao texto_principal" placeholder="Nome do seu projeto" type="text" data-form="titulo">
+            <input class="input input_configuracao texto_principal" placeholder="Nome do seu projeto" type="text"
+              data-form="titulo">
             <textarea class="input input_configuracao input_configuracao_descricao texto_principal"
               placeholder="Descrição do seu projeto" name="" id="" cols="30" rows="10" data-form="descricao"></textarea>
           </div>
           <div class="configuracao_projeto_flex">
             <h4 class="navegacao_titulo">Personalização</h4>
             <div class="configuracao_botoes_projeto">
-              <select name="texto_select" id="texto_select" class="input texto_select input_configuracao" data-form="linguagem">
+              <select name="texto_select" id="texto_select" class="input texto_select input_configuracao"
+                data-form="linguagem">
                 <option value="html">HTML</option>
                 <option value="javascript">JavaScript</option>
               </select>
@@ -117,6 +131,9 @@
   <script src="js/script.js"></script>
   <script src="js/color-picker.js"></script>
   <script src="js/salvar.js"></script>
+  <script src="js/exportar.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  
 </body>
 
 </html>
