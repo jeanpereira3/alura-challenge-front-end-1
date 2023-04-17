@@ -20,5 +20,4 @@ botaoExportar.addEventListener('change', () => {
   if (formato === 'png' || formato === 'jpg' || formato === 'svg'){
     exportar(formato)
   }
-  console.log(formato);
 })
